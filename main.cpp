@@ -27,12 +27,16 @@ int main(){
     C4.setRam(8);
 
     Laboratorio lab;
-    lab.agregarFinal(C1);
-    lab.agregarFinal(C2);
-    lab.agregarFinal(C3);
-    lab.agregarFinal(C4);
+
+    lab << C1 << C2 << C3 << C4;
+
+    Computadora C5;
+    cin >> C5;
+    lab << C5;
 
     lab.mostrar();
+
+    cout << C1 << C2 << C3 << C4 << C5;
 
     system("PAUSE");
     return 0;

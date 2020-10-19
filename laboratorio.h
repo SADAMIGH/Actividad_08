@@ -8,8 +8,13 @@ class Laboratorio{
     size_t cont;
 public: 
     Laboratorio();
-    void agregarFinal(const Computadora &p);
+    void agregarComputadora(const Computadora &p);
     void mostrar();
+
+    friend Laboratorio& operator<<(Laboratorio &l, const Computadora &c){
+        l.agregarComputadora(c);
+        return l;
+    }
 };
 
 
